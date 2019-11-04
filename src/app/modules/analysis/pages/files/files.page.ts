@@ -71,6 +71,8 @@ export class ACFilesPage extends AXBasePageComponent {
             //     .get("https://jsonplaceholder.typicode.com/todos", {})
             //     .result(c => {
             //         resolve(c);
+            //         this.items = c;
+            //         resolve(this.ite)
             //     });
             resolve(this.mockData)
         });
