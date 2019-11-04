@@ -1,0 +1,17 @@
+.ac-card {
+  height: 32px;
+  width: 100%;
+  display: block;
+  text-align: center;
+  line-height: 32px;
+  font-size: 14px;
+  &.heading-row {
+    background: #e5f0ff;
+    margin-bottom: 10px;
+    border-radius: 5px;
+  }
+  input {
+    width: 100%;
+    line-height: initial !important;
+  }
+}

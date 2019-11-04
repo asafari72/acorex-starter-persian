@@ -11,10 +11,11 @@ import {
   AXHeaderBarMenuService
 } from "acorex-spa";
 import { NavMenuService } from "./shared/services/nav-menu.service";
-import { StarterDashboardPage } from "./modules/starter/dashboard/pages/dashboard.page";
 import { HeaderBarMenuService } from "./shared/services/header-bar-menu.service";
 import { SharedModule } from "./shared/shared.module";
 import { StarterDashboardModule } from "./modules/starter/dashboard/config/dashboard.module";
+import { AnalysisModule } from './modules/analysis/config/analysis.module';
+import { ACCostsPage } from './modules/analysis/pages/cost/costs.page';
 
 @NgModule({
   declarations: [AppComponent],
@@ -24,14 +25,15 @@ import { StarterDashboardModule } from "./modules/starter/dashboard/config/dashb
     SharedModule,
     StarterDashboardModule,
     ACoreXUIModule,
-    ACoreXSPAModule
+    ACoreXSPAModule,
+    AnalysisModule
   ],
   providers: [
     {
       provide: "startUpTab",
       useValue: {
-        content: StarterDashboardPage,
-        title: "داشبورد",
+        content: ACCostsPage,
+        title: "لیست صورت حساب",
         closable: false
       }
     },
@@ -46,4 +48,4 @@ import { StarterDashboardModule } from "./modules/starter/dashboard/config/dashb
   ],
   bootstrap: [AppComponent]
 })
-export class AppModule {}
+export class AppModule { }

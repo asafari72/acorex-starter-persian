@@ -1,0 +1,19 @@
+<ax-page>
+    <ax-page-content>
+        <div class="ax-pad-md" style="height: 100%">
+            <ax-data-grid rtl="true">
+                <ax-data-source>
+                    <ax-callback-read [provideData]="provideGridData"></ax-callback-read>
+                </ax-data-source>
+                <ax-command-column [items]="commandItems" (itemClick)="onEditClick($event)"></ax-command-column>
+                <ax-text-column field="title" caption="عنوان فعالیت" [width]="500"></ax-text-column>
+                <ax-text-column field="barCode" caption="بارکد" [width]="150"></ax-text-column>
+                <ax-text-column field="status" caption="وضعیت" [width]="150"></ax-text-column>
+                <ax-text-column field="fileCount" caption="تعداد پرونده" [width]="100"></ax-text-column>
+                <ax-text-column field="totalCost" caption="مبلغ کل هزینه" [width]="150"></ax-text-column>
+                <ax-text-column field="totalAmountRequest" caption="مبلغ کل درخواستی" [width]="150"></ax-text-column>
+                <ax-text-column field="totalAmountEndorsement" caption="مبلغ کل تاییدی" [width]="150"></ax-text-column>
+            </ax-data-grid>
+        </div>
+    </ax-page-content>
+</ax-page>

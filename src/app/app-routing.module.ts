@@ -5,7 +5,7 @@ import { AXTopMenuLayoutComponent, AXTabularLayoutComponent } from "acorex-spa";
 const routes: Routes = [
   {
     path: "",
-    component: AXTabularLayoutComponent
+    component: AXTopMenuLayoutComponent
   }
 ];
 

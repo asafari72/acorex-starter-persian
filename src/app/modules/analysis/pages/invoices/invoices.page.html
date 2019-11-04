@@ -1,0 +1,142 @@
+<ax-page>
+    <ax-toolbar>
+        <ax-toolbar-menu [items]="actionItems" (itemClick)="menuItemClickHandler($event)">
+        </ax-toolbar-menu>
+        <div></div>
+
+    </ax-toolbar>
+    <ax-page-content>
+        <div class="ax-pad-md" style="height: 100%;overflow-x: hidden">
+            <ax-panel-box caption="اطلاعات">
+                <div class="row">
+                    <ax-col col-sm="4">
+                        <span>شماره پرونده : 456231</span>
+                    </ax-col>
+                    <ax-col col-sm="4">
+                        <span>شماره صورت حساب : 1398/19/2530/192</span>
+                    </ax-col>
+                    <ax-col col-sm="4">
+                        <span>مشخصات بیمه شده : حمید صابری</span>
+                    </ax-col>
+                </div>
+                <hr>
+                <div class="row">
+                    <ax-col col-sm="4">
+                        <span>قرارداد: صندوق بازنشستگی</span>
+                    </ax-col>
+                    <ax-col col-sm="4">
+                        <span>شماره قرارداد: 1396/19/1/15524</span>
+                    </ax-col>
+                    <ax-col col-sm="4">
+                        <span>درصد فرانشیز: 10 درصد</span>
+                    </ax-col>
+                </div>
+                <hr>
+
+                <div class="row">
+                    <ax-col col-sm="4">
+                        <span>مبلغ کل هزینه : 8,000,000 ریال</span>
+                    </ax-col>
+                    <ax-col col-sm="4">
+                        <span>مبلغ کل درخواستی: 6,800,000</span>
+                    </ax-col>
+                    <ax-col col-sm="4">
+                        <span>مانده سقف: 30,000,000</span>
+                    </ax-col>
+                </div>
+            </ax-panel-box>
+            <br>
+            <ax-row>
+                <ax-col col-sm="2">
+                    <div class="ac-card heading-row">سرفصل هزینه</div>
+                </ax-col>
+                <ax-col col-sm="2">
+                    <div class="ac-card heading-row">مبلغ درخواستی</div>
+                </ax-col>
+                <ax-col col-sm="2">
+                    <div class="ac-card heading-row">مبلغ تأییدی</div>
+                </ax-col>
+                <ax-col col-sm="2">
+                    <div class="ac-card heading-row">علت کسور</div>
+                </ax-col>
+                <ax-col col-sm="4">
+                    <div class="ac-card heading-row">توضیحات</div>
+                </ax-col>
+            </ax-row>
+
+            <ac-cost-row label="هتلینگ" name="hoteling" [selectItems]="selectBoxItems"
+                (onRowDataChange)="handelRowChange($event)"></ac-cost-row>
+            <ac-cost-row label="خدمات پرستاری" name="hoteling" [selectItems]="selectBoxItems"></ac-cost-row>
+            <ac-cost-row label="ویزیت" name="hoteling" [selectItems]="selectBoxItems"></ac-cost-row>
+            <ac-cost-row label="خدمات جراحی" name="hoteling" [selectItems]="selectBoxItems"></ac-cost-row>
+            <ac-cost-row label="خدمات مشاوره ای" name="hoteling" [selectItems]="selectBoxItems"></ac-cost-row>
+            <ac-cost-row label="پزشک جراح" name="hoteling" [selectItems]="selectBoxItems"></ac-cost-row>
+            <ac-cost-row label="کمک جراح" name="hoteling" [selectItems]="selectBoxItems"></ac-cost-row>
+            <ac-cost-row label="اتاق عمل" name="hoteling" [selectItems]="selectBoxItems"></ac-cost-row>
+            <ac-cost-row label="بیهوشی" name="hoteling" [selectItems]="selectBoxItems"></ac-cost-row>
+            <div *ngIf="showMore">
+                <ac-cost-row label="داروی مصرفی اتاق عمل" name="hoteling" [selectItems]="selectBoxItems"></ac-cost-row>
+
+                <ac-cost-row label="داراوی مصرفی بخش" name="hoteling" [selectItems]="selectBoxItems"></ac-cost-row>
+                <ac-cost-row label="آزمایشات تشخیص طبی" name="hoteling" [selectItems]="selectBoxItems"></ac-cost-row>
+                <ac-cost-row label="نوارنگاری" name="hoteling" [selectItems]="selectBoxItems"></ac-cost-row>
+                <ac-cost-row label="آسیب شناسی" name="hoteling" [selectItems]="selectBoxItems"></ac-cost-row>
+                <ac-cost-row label="رادیوگرافی" name="hoteling" [selectItems]="selectBoxItems"></ac-cost-row>
+                <ac-cost-row label="سونوگرافی" name="hoteling" [selectItems]="selectBoxItems"></ac-cost-row>
+                <ac-cost-row label="سی تی اسکن" name="hoteling" [selectItems]="selectBoxItems"></ac-cost-row>
+                <ac-cost-row label="ام آر آی" name="hoteling" [selectItems]="selectBoxItems"></ac-cost-row>
+                <ac-cost-row label="پزشکی هسته ای" name="hoteling" [selectItems]="selectBoxItems"></ac-cost-row>
+                <ac-cost-row label="توانبخشی" name="hoteling" [selectItems]="selectBoxItems"></ac-cost-row>
+                <ac-cost-row label="پروتز/اورتز" name="hoteling" [selectItems]="selectBoxItems"></ac-cost-row>
+                <ac-cost-row label="شیمی درمانی" name="hoteling" [selectItems]="selectBoxItems"></ac-cost-row>
+                <ac-cost-row label="دیالیز" name="hoteling" [selectItems]="selectBoxItems"></ac-cost-row>
+                <ac-cost-row label="سایر" name="hoteling" [selectItems]="selectBoxItems"></ac-cost-row>
+                <ac-cost-row label="رادیوتراپی" name="hoteling" [selectItems]="selectBoxItems"></ac-cost-row>
+                <ac-cost-row label="آنژیوگرافی" name="hoteling" [selectItems]="selectBoxItems"></ac-cost-row>
+                <ac-cost-row label="دندانپزشکی" name="hoteling" [selectItems]="selectBoxItems"></ac-cost-row>
+                <ac-cost-row label="فیزیوتراپی" name="hoteling" [selectItems]="selectBoxItems"></ac-cost-row>
+                <ac-cost-row label="اعمال مکمل تشخیص" name="hoteling" [selectItems]="selectBoxItems"></ac-cost-row>
+                <ac-cost-row label="همراه بیمار" name="hoteling" [selectItems]="selectBoxItems"></ac-cost-row>
+                <ac-cost-row label="پزشکی قانونی" name="hoteling" [selectItems]="selectBoxItems"></ac-cost-row>
+                <ac-cost-row label="خدمات مکمل براقدامات تشخیصی" name="hoteling" [selectItems]="selectBoxItems">
+                </ac-cost-row>
+            </div>
+            <ax-row>
+                <ax-col col-sm="2">
+                    <ax-button text="{{moreText}}" [block]="true" (onClick)="onMoreClick()">
+                    </ax-button>
+
+                </ax-col>
+                <ax-col col-sm="2">
+                </ax-col>
+                <ax-col col-sm="2">
+                </ax-col>
+                <ax-col col-sm="2">
+                </ax-col>
+                <ax-col col-sm="4">
+                </ax-col>
+            </ax-row>
+        </div>
+        <div style="height: 60px"></div>
+        <div class="ax-pad-md fixed-footer">
+            <ax-row>
+                <ax-col col-sm="2">
+                    <div class="ac-card footer-row-header">
+                        مجموع
+                    </div>
+
+                </ax-col>
+                <ax-col col-sm="2">
+                    <div class="ac-card footer-row"></div>
+                </ax-col>
+                <ax-col col-sm="2">
+                    <div class="ac-card footer-row"></div>
+                </ax-col>
+                <ax-col col-sm="2">
+                </ax-col>
+                <ax-col col-sm="4">
+                </ax-col>
+            </ax-row>
+        </div>
+    </ax-page-content>
+</ax-page>

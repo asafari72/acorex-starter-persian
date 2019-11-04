@@ -8,23 +8,8 @@ export class NavMenuService extends AXNavMenuService {
     {
       id: "0",
       name: "dashboard",
-      text: "داشبورد",
-      icon: "fas fa-tachometer-alt",
-      visible: true
-    },
-    {
-      id: "1",
-      name: "dashboard",
-      text: "منو درختی",
-      icon: "fas fa-tachometer-alt",
-      visible: true
-    },
-    {
-      id: "1_1",
-      parentId: "1",
-      name: "dashboard",
-      text: "زیر منو 1",
-      icon: "fas fa-tachometer-alt",
+      text: "همگام سازی اطلاعات",
+      icon: "fas fa-sync",
       visible: true
     }
   ];
