@@ -10,7 +10,7 @@
             <ax-panel-box caption="جستجوی پرونده">
                 <div class="row">
                     <ax-col col-sm="4">
-                        <ax-text-box label="شماره پرونده"></ax-text-box>
+                        <ax-text-box label="شماره صورت حساب"></ax-text-box>
                     </ax-col>
                     <ax-col col-sm="4">
                         <ax-text-box label="کد ملی"></ax-text-box>
@@ -21,10 +21,9 @@
                 </div>
                 <div class="row">
                     <ax-col col-sm="4">
-                        <ax-text-box label="عنوان خدمت"></ax-text-box>
+                        <ax-text-box label="شماره پرونده"></ax-text-box>
                     </ax-col>
                     <ax-col col-sm="4">
-                        <ax-text-box label="وضعیت پرونده"></ax-text-box>
                     </ax-col>
                     <ax-col col-sm="4">
                     </ax-col>
@@ -37,7 +36,6 @@
                         <ax-callback-read [provideData]="provideGridData"></ax-callback-read>
                     </ax-data-source>
                     <ax-command-column [items]="commandItems" (itemClick)="onEditClick($event)"></ax-command-column>
-
                     <ax-text-column field="invoiceNumber" caption="شماره صورت حساب" [width]="150"></ax-text-column>
                     <ax-text-column field="fileNumber" caption="شماره پرونده" [width]="150"></ax-text-column>
                     <ax-text-column field="nationalCode" caption="کد ملی " [width]="150"></ax-text-column>
@@ -49,12 +47,13 @@
                     <ax-text-column field="ceilingBalance" caption="مانده سقف" [width]="150"></ax-text-column>
                     <ax-text-column field="allCost" caption="مبلغ کل هزینه" [width]="150"></ax-text-column>
                     <ax-text-column field="requestCost" caption="مبلغ درخواستی" [width]="150"></ax-text-column>
-                    <ax-text-column field="comfirmedCost" caption="مبلغ تاییدی" [width]="150"></ax-text-column>
+                    <ax-text-column field="requestCost" caption="سهم بیمه پایه" [width]="150"></ax-text-column>
+                    <ax-text-column field="comfirmedCost" caption="مبلغ درخواستی" [width]="150"></ax-text-column>
                     <ax-text-column field="fractionAmount" caption="مبلغ کسور" [width]="150"></ax-text-column>
+                    <ax-text-column field="fractionAmount" caption="مبلغ تاییدی" [width]="150"></ax-text-column>
                     <ax-text-column field="amountPaidSoFar" caption="مبلغ پرداخت شده تا کنون" [width]="150">
                     </ax-text-column>
                     <ax-text-column field="amountPayable" caption="مبلغ قابل پرداخت" [width]="150"></ax-text-column>
-
                 </ax-data-grid>
             </div>
         </div>

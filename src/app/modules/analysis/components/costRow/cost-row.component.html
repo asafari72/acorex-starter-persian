@@ -4,22 +4,27 @@
     </ax-col>
     <ax-col col-sm="2">
         <div class="ac-card">
-            <ax-text-box (onKey)="handleChangeTextBox($event)"></ax-text-box>
+            <ax-text-box [(text)]="requestedAmount" (change)="handleAmount()"></ax-text-box>
         </div>
     </ax-col>
     <ax-col col-sm="2">
         <div class="ac-card">
-            <ax-text-box></ax-text-box>
+            <ax-text-box [(text)]="fractionsAmount" (change)="handleAmount()"></ax-text-box>
+        </div>
+    </ax-col>
+    <ax-col col-sm="2">
+        <div class="ac-card">
+            <ax-text-box [(text)]="confirmedAmount" disabled="true"></ax-text-box>
         </div>
     </ax-col>
     <ax-col col-sm="2">
         <div class="ac-card">
             <ax-select-box [items]="selectItems" placeholder="name" [allowSearch]="true"
-                (selectedItemsChange)="selectChange[name]($event)">
+                (selectedValuesChange)="selectChange($event)" selected>
             </ax-select-box>
         </div>
     </ax-col>
-    <ax-col col-sm="4">
+    <ax-col col-sm="2">
         <div class="ac-card">
             <ax-text-box></ax-text-box>
         </div>

@@ -28,7 +28,7 @@
                         <span>شماره قرارداد: 1396/19/1/15524</span>
                     </ax-col>
                     <ax-col col-sm="4">
-                        <span>درصد فرانشیز: 10 درصد</span>
+                        <span>نوع صورت حساب : مستقیم</span>
                     </ax-col>
                 </div>
                 <hr>
@@ -54,51 +54,84 @@
                     <div class="ac-card heading-row">مبلغ درخواستی</div>
                 </ax-col>
                 <ax-col col-sm="2">
-                    <div class="ac-card heading-row">مبلغ تأییدی</div>
+                    <div class="ac-card heading-row">مبلغ کسور</div>
+                </ax-col>
+                <ax-col col-sm="2">
+                    <div class="ac-card heading-row">مبلغ تاییدی</div>
                 </ax-col>
                 <ax-col col-sm="2">
                     <div class="ac-card heading-row">علت کسور</div>
                 </ax-col>
-                <ax-col col-sm="4">
+                <ax-col col-sm="2">
                     <div class="ac-card heading-row">توضیحات</div>
                 </ax-col>
             </ax-row>
 
-            <ac-cost-row label="هتلینگ" name="hoteling" [selectItems]="selectBoxItems"
+            <ac-cost-row label="هتلینگ" name="hoteling" [selectItems]="hotelingSelect"
                 (onRowDataChange)="handelRowChange($event)"></ac-cost-row>
-            <ac-cost-row label="خدمات پرستاری" name="hoteling" [selectItems]="selectBoxItems"></ac-cost-row>
-            <ac-cost-row label="ویزیت" name="hoteling" [selectItems]="selectBoxItems"></ac-cost-row>
-            <ac-cost-row label="خدمات جراحی" name="hoteling" [selectItems]="selectBoxItems"></ac-cost-row>
-            <ac-cost-row label="خدمات مشاوره ای" name="hoteling" [selectItems]="selectBoxItems"></ac-cost-row>
-            <ac-cost-row label="پزشک جراح" name="hoteling" [selectItems]="selectBoxItems"></ac-cost-row>
-            <ac-cost-row label="کمک جراح" name="hoteling" [selectItems]="selectBoxItems"></ac-cost-row>
-            <ac-cost-row label="اتاق عمل" name="hoteling" [selectItems]="selectBoxItems"></ac-cost-row>
-            <ac-cost-row label="بیهوشی" name="hoteling" [selectItems]="selectBoxItems"></ac-cost-row>
+            <ac-cost-row label="خدمات پرستاری" name="hoteling" [selectItems]="nurseSelect"
+                (onRowDataChange)="handelRowChange($event)"></ac-cost-row>
+            <ac-cost-row label="ویزیت" name="hoteling" [selectItems]="visitSelect"
+                (onRowDataChange)="handelRowChange($event)"></ac-cost-row>
+            <ac-cost-row label="خدمات جراحی" name="hoteling" [selectItems]="selectBoxItems"
+                (onRowDataChange)="handelRowChange($event)"></ac-cost-row>
+            <ac-cost-row label="خدمات مشاوره ای" name="hoteling" [selectItems]="selectBoxItems"
+                (onRowDataChange)="handelRowChange($event)"></ac-cost-row>
+            <ac-cost-row label="پزشک جراح" name="hoteling" [selectItems]="selectBoxItems"
+                (onRowDataChange)="handelRowChange($event)"></ac-cost-row>
+            <ac-cost-row label="کمک جراح" name="hoteling" [selectItems]="selectBoxItems"
+                (onRowDataChange)="handelRowChange($event)"></ac-cost-row>
+            <ac-cost-row label="اتاق عمل" name="hoteling" [selectItems]="selectBoxItems"
+                (onRowDataChange)="handelRowChange($event)"></ac-cost-row>
+            <ac-cost-row label="بیهوشی" name="hoteling" [selectItems]="selectBoxItems"
+                (onRowDataChange)="handelRowChange($event)"></ac-cost-row>
             <div *ngIf="showMore">
-                <ac-cost-row label="داروی مصرفی اتاق عمل" name="hoteling" [selectItems]="selectBoxItems"></ac-cost-row>
-
-                <ac-cost-row label="داراوی مصرفی بخش" name="hoteling" [selectItems]="selectBoxItems"></ac-cost-row>
-                <ac-cost-row label="آزمایشات تشخیص طبی" name="hoteling" [selectItems]="selectBoxItems"></ac-cost-row>
-                <ac-cost-row label="نوارنگاری" name="hoteling" [selectItems]="selectBoxItems"></ac-cost-row>
-                <ac-cost-row label="آسیب شناسی" name="hoteling" [selectItems]="selectBoxItems"></ac-cost-row>
-                <ac-cost-row label="رادیوگرافی" name="hoteling" [selectItems]="selectBoxItems"></ac-cost-row>
-                <ac-cost-row label="سونوگرافی" name="hoteling" [selectItems]="selectBoxItems"></ac-cost-row>
-                <ac-cost-row label="سی تی اسکن" name="hoteling" [selectItems]="selectBoxItems"></ac-cost-row>
-                <ac-cost-row label="ام آر آی" name="hoteling" [selectItems]="selectBoxItems"></ac-cost-row>
-                <ac-cost-row label="پزشکی هسته ای" name="hoteling" [selectItems]="selectBoxItems"></ac-cost-row>
-                <ac-cost-row label="توانبخشی" name="hoteling" [selectItems]="selectBoxItems"></ac-cost-row>
-                <ac-cost-row label="پروتز/اورتز" name="hoteling" [selectItems]="selectBoxItems"></ac-cost-row>
-                <ac-cost-row label="شیمی درمانی" name="hoteling" [selectItems]="selectBoxItems"></ac-cost-row>
-                <ac-cost-row label="دیالیز" name="hoteling" [selectItems]="selectBoxItems"></ac-cost-row>
-                <ac-cost-row label="سایر" name="hoteling" [selectItems]="selectBoxItems"></ac-cost-row>
-                <ac-cost-row label="رادیوتراپی" name="hoteling" [selectItems]="selectBoxItems"></ac-cost-row>
-                <ac-cost-row label="آنژیوگرافی" name="hoteling" [selectItems]="selectBoxItems"></ac-cost-row>
-                <ac-cost-row label="دندانپزشکی" name="hoteling" [selectItems]="selectBoxItems"></ac-cost-row>
-                <ac-cost-row label="فیزیوتراپی" name="hoteling" [selectItems]="selectBoxItems"></ac-cost-row>
-                <ac-cost-row label="اعمال مکمل تشخیص" name="hoteling" [selectItems]="selectBoxItems"></ac-cost-row>
-                <ac-cost-row label="همراه بیمار" name="hoteling" [selectItems]="selectBoxItems"></ac-cost-row>
-                <ac-cost-row label="پزشکی قانونی" name="hoteling" [selectItems]="selectBoxItems"></ac-cost-row>
-                <ac-cost-row label="خدمات مکمل براقدامات تشخیصی" name="hoteling" [selectItems]="selectBoxItems">
+                <ac-cost-row label="داروی مصرفی اتاق عمل" name="hoteling" [selectItems]="selectBoxItems"
+                    (onRowDataChange)="handelRowChange($event)"></ac-cost-row>
+                <ac-cost-row label="داراوی مصرفی بخش" name="hoteling" [selectItems]="selectBoxItems"
+                    (onRowDataChange)="handelRowChange($event)"></ac-cost-row>
+                <ac-cost-row label="آزمایشات تشخیص طبی" name="hoteling" [selectItems]="selectBoxItems"
+                    (onRowDataChange)="handelRowChange($event)"></ac-cost-row>
+                <ac-cost-row label="نوارنگاری" name="hoteling" [selectItems]="selectBoxItems"
+                    (onRowDataChange)="handelRowChange($event)"></ac-cost-row>
+                <ac-cost-row label="آسیب شناسی" name="hoteling" [selectItems]="selectBoxItems"
+                    (onRowDataChange)="handelRowChange($event)"></ac-cost-row>
+                <ac-cost-row label="رادیوگرافی" name="hoteling" [selectItems]="selectBoxItems"
+                    (onRowDataChange)="handelRowChange($event)"></ac-cost-row>
+                <ac-cost-row label="سونوگرافی" name="hoteling" [selectItems]="selectBoxItems"
+                    (onRowDataChange)="handelRowChange($event)"></ac-cost-row>
+                <ac-cost-row label="سی تی اسکن" name="hoteling" [selectItems]="selectBoxItems"
+                    (onRowDataChange)="handelRowChange($event)"></ac-cost-row>
+                <ac-cost-row label="ام آر آی" name="hoteling" [selectItems]="selectBoxItems"
+                    (onRowDataChange)="handelRowChange($event)"></ac-cost-row>
+                <ac-cost-row label="پزشکی هسته ای" name="hoteling" [selectItems]="selectBoxItems"
+                    (onRowDataChange)="handelRowChange($event)"></ac-cost-row>
+                <ac-cost-row label="توانبخشی" name="hoteling" [selectItems]="selectBoxItems"
+                    (onRowDataChange)="handelRowChange($event)"></ac-cost-row>
+                <ac-cost-row label="پروتز/اورتز" name="hoteling" [selectItems]="selectBoxItems"
+                    (onRowDataChange)="handelRowChange($event)"></ac-cost-row>
+                <ac-cost-row label="شیمی درمانی" name="hoteling" [selectItems]="selectBoxItems"
+                    (onRowDataChange)="handelRowChange($event)"></ac-cost-row>
+                <ac-cost-row label="دیالیز" name="hoteling" [selectItems]="selectBoxItems"
+                    (onRowDataChange)="handelRowChange($event)"></ac-cost-row>
+                <ac-cost-row label="سایر" name="hoteling" [selectItems]="selectBoxItems"
+                    (onRowDataChange)="handelRowChange($event)"></ac-cost-row>
+                <ac-cost-row label="رادیوتراپی" name="hoteling" [selectItems]="selectBoxItems"
+                    (onRowDataChange)="handelRowChange($event)"></ac-cost-row>
+                <ac-cost-row label="آنژیوگرافی" name="hoteling" [selectItems]="selectBoxItems"
+                    (onRowDataChange)="handelRowChange($event)"></ac-cost-row>
+                <ac-cost-row label="دندانپزشکی" name="hoteling" [selectItems]="selectBoxItems"
+                    (onRowDataChange)="handelRowChange($event)"></ac-cost-row>
+                <ac-cost-row label="فیزیوتراپی" name="hoteling" [selectItems]="selectBoxItems"
+                    (onRowDataChange)="handelRowChange($event)"></ac-cost-row>
+                <ac-cost-row label="اعمال مکمل تشخیص" name="hoteling" [selectItems]="selectBoxItems"
+                    (onRowDataChange)="handelRowChange($event)"></ac-cost-row>
+                <ac-cost-row label="همراه بیمار" name="hoteling" [selectItems]="selectBoxItems"
+                    (onRowDataChange)="handelRowChange($event)"></ac-cost-row>
+                <ac-cost-row label="پزشکی قانونی" name="hoteling" [selectItems]="selectBoxItems"
+                    (onRowDataChange)="handelRowChange($event)"></ac-cost-row>
+                <ac-cost-row label="خدمات مکمل براقدامات تشخیصی" name="hoteling" [selectItems]="selectBoxItems"
+                    (onRowDataChange)="handelRowChange($event)">
                 </ac-cost-row>
             </div>
             <ax-row>

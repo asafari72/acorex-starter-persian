@@ -13,6 +13,7 @@ export class ACInvoicesPage extends AXBasePageComponent {
     }
 
     moreText: string = "نمایش بیشتر"
+    dataItems: any[] = [];
     selectBoxItems: SelectItem[] = [
         { id: "1", text: "Select Option 1" },
         { id: "2", text: "Select Option 2" },
@@ -51,7 +52,31 @@ export class ACInvoicesPage extends AXBasePageComponent {
     }
 
     handelRowChange(e) {
-        console.log(e)
+        this.dataItems.push(e)
+        console.log(this.dataItems)
     }
 
+    hotelingSelect: SelectItem[] = [
+        { id: "0", text: "مغایرت تعرفه درخواستی" },
+        { id: "1", text: "کسر درجه ارزشیابی" },
+        { id: "2", text: "مغایرت تعداد روز بستری با تعداد درخواستی" },
+        { id: "3", text: "ثبت تکراری" },
+        { id: "4", text: "عدم حضور پزشک مقیم در بخش های ویژه" },
+        { id: "5", text: "اضافه قیمت" },
+        { id: "6", text: "مغایرت نوع تخت" }
+    ]
+    nurseSelect: SelectItem[] = [
+        { id: "0", text: "اشتباه محاسباتی" },
+        { id: "1", text: "ثبت تکراری" },
+        { id: "2", text: "اضافه قیمت" }
+    ]
+    visitSelect: SelectItem[] = [
+        { id: "0", text: "عدم صحت ضریب ترجیحی مناطق محروم" },
+        { id: "1", text: "مغایرت نوع ویزیت" },
+        { id: "2", text: "عدم صحت ضریب ریالی محاسبه" },
+        { id: "3", text: "اضافه تعداد درخواست" },
+        { id: "3", text: "اضافه تعداد درخواست" }
+
+
+    ]
 }

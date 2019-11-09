@@ -16,6 +16,8 @@ import { SharedModule } from "./shared/shared.module";
 import { StarterDashboardModule } from "./modules/starter/dashboard/config/dashboard.module";
 import { AnalysisModule } from './modules/analysis/config/analysis.module';
 import { ACCostsPage } from './modules/analysis/pages/cost/costs.page';
+import { ServiceWorkerModule } from '@angular/service-worker';
+import { environment } from '../environments/environment';
 
 @NgModule({
   declarations: [AppComponent],
@@ -26,7 +28,8 @@ import { ACCostsPage } from './modules/analysis/pages/cost/costs.page';
     StarterDashboardModule,
     ACoreXUIModule,
     ACoreXSPAModule,
-    AnalysisModule
+    AnalysisModule,
+    ServiceWorkerModule.register('ngsw-worker.js', { enabled: environment.production })
   ],
   providers: [
     {

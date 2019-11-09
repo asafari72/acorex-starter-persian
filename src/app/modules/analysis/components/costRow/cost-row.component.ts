@@ -1,4 +1,5 @@
 import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
+import { SelectItem } from 'acorex-ui';
 
 @Component({
     selector: 'ac-cost-row',
@@ -12,17 +13,40 @@ export class ACCostRowComponent implements OnInit {
 
     @Input() label: string = "";
     @Input() name: string = "";
-    @Input() selectItems: any[] = []
+    @Input() selectItems: SelectItem[] = []
+
+    requestedAmount: number = null;
+    fractionsAmount: number = null;
+    confirmedAmount: number = null;
+    numericOnly: any[] = [/(^[0-9][A-Za-z0-9 -]*$)/];
+
+    handleAmount() {
+        debugger;
+        this.confirmedAmount = Number(this.requestedAmount) - Number(this.fractionsAmount)
+        if (this.fractionsAmount) {
+            this.handleChangeTextBox()
+        }
+
+    }
+
+
+    selectChange(e: SelectItem) {
+        console.log("select", e)
+
+    }
 
     @Output()
     onRowDataChange: EventEmitter<any> = new EventEmitter<any>();
 
-    handleChangeTextBox(e) {
+    handleChangeTextBox() {
 
         let data = {
-            requestAmount: e.target.value
+            requestedAmount: this.requestedAmount,
+            fractionsAmount: this.fractionsAmount,
+            confirmedAmount: this.confirmedAmount,
         }
 
         this.onRowDataChange.emit(data)
     }
+
 }

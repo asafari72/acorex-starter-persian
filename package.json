@@ -1,5 +1,5 @@
 {
-  "name": "acorex-starter-fa",
+  "name": "claim-analysis",
   "version": "0.0.0",
   "scripts": {
     "ng": "ng",
@@ -7,7 +7,8 @@
     "build": "ng build",
     "test": "ng test",
     "lint": "ng lint",
-    "e2e": "ng e2e"
+    "e2e": "ng e2e",
+    "offline": "http-server -p 8080 -c-1 dist/claim-analysis"
   },
   "private": true,
   "dependencies": {
@@ -18,7 +19,9 @@
     "@angular/forms": "~7.2.0",
     "@angular/platform-browser": "~7.2.0",
     "@angular/platform-browser-dynamic": "~7.2.0",
+    "@angular/pwa": "^0.12.4",
     "@angular/router": "~7.2.0",
+    "@angular/service-worker": "~7.2.0",
     "@fortawesome/fontawesome-free": "^5.11.2",
     "acorex-spa": "file:C:/ACoreX/acorex-spa-0.0.1.tgz",
     "acorex-ui": "file:C:/ACoreX/acorex-ui-0.0.1.tgz",
